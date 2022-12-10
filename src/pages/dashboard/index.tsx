@@ -106,7 +106,11 @@ export default function Dashboard({orders}: HomeProps){
 
                 {
                     modalVisible && (
-                        <ModalOrder/>
+                        <ModalOrder
+                            isOpen={modalVisible}
+                            onRequestClose={handleCloseModal}
+                            order={modalItem}
+                        />
                     )
                 }
             </div>
